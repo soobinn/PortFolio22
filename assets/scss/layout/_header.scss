@@ -1,0 +1,72 @@
+header {
+    position: fixed;
+    z-index: 10;
+    border-bottom: 1px solid #191717;
+    font-family: "DM Serif Display", serif;
+    color: #191717;
+    font-weight: 200;
+    width: 100%;
+    transition: 0.2s;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 20px;
+        @include mobile {
+            padding: 0;
+            justify-content: space-between;
+        }
+
+        .logo {
+            .link-home {
+                @include mobile {
+                    padding: 10px;
+                    display: block;
+                }
+            }
+            h1 {
+                font-size: 25px;
+                @include mobile {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .menu {
+        .menu-list {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            @include mobile {
+                gap: 10px;
+            }
+        }
+
+        a {
+            span {
+                font-size: 1.4rem;
+            }
+            display: flex;
+            padding: 20px;
+            text-align: center;
+            @include mobile {
+                padding: 10px 10px 10px 0px;
+            }
+        }
+    }
+
+    .head-icon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        span {
+            display: flex;
+            width: 80px;
+            align-items: center;
+        }
+    }
+}

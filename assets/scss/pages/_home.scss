@@ -1,0 +1,561 @@
+body {
+    &.dark {
+        background-color: #191717;
+
+        header {
+            filter: invert(1);
+            transition: 0.2s;
+        }
+
+        & svg {
+            filter: invert(1);
+        }
+    }
+}
+
+.inner {
+    padding: 0 1rem;
+    height: 100%;
+    @include mobile {
+        padding: 0 10px;
+    }
+}
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #191717;
+    z-index: 99;
+    font-family: "DM Serif Display", serif;
+
+    top: 0%;
+    align-items: center;
+    justify-content: center;
+    -webkit-clip-path: circle(70.7% at 50% 50%);
+    clip-path: circle(70.7% at 50% 50%);
+    span {
+        font-size: 3rem;
+        color: #fff;
+    }
+    &.on {
+        -webkit-clip-path: circle(0% at 50% 50%);
+        clip-path: circle(0% at 50% 50%);
+        transition: 1s;
+    }
+}
+.sc-main {
+    position: relative;
+    .inner {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+    }
+    .text-area {
+        padding-top: 20vw;
+        font-family: "DM Serif Display", serif;
+        letter-spacing: -0.025em;
+        font-weight: 500;
+        font-size: 160px;
+        line-height: 1;
+        @include desktop {
+            font-size: 120px;
+        }
+        @include tablet {
+            font-size: 80px;
+        }
+        @include mobile {
+            padding-top: 40vw;
+            font-size: 35px;
+            width: 100%;
+        }
+        .word {
+            overflow: hidden;
+        }
+    }
+    .deco1 {
+        position: absolute;
+        top: 100px;
+        right: 20px;
+        font-size: 18px;
+        font-family: "DM Serif Display", serif;
+        @include mobile {
+            right: 10px;
+            font-size: 12px;
+        }
+    }
+
+    .main-video {
+        position: relative;
+        .bar-wrap {
+            z-index: 1;
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            .bar {
+                flex: 1;
+                height: 0%;
+                background: #fff;
+            }
+        }
+
+        video {
+            width: 100%;
+            filter: grayscale(1);
+        }
+    }
+}
+
+.sc-intro {
+    padding: 11.5rem 50px;
+    @include desktop {
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include mobile {
+    }
+    .inner {
+        @include desktop {
+            height: auto;
+        }
+    }
+    h2 {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1;
+        margin-bottom: 50px;
+        @include tablet {
+            margin-bottom: 25px;
+        }
+        @include mobile {
+            font-weight: 700;
+            font-size: 28px;
+        }
+    }
+    .text-box {
+        overflow: hidden;
+
+        strong {
+            display: block;
+            width: 50%;
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 1.5;
+            @include tablet {
+                font-size: 20px;
+                width: 65%;
+            }
+            @include mobile {
+                width: 100%;
+                font-size: 19px;
+            }
+        }
+        p {
+            width: 50%;
+            margin-top: 30px;
+            font-size: 20px;
+            line-height: 1.92;
+            float: right;
+            @include tablet {
+                font-size: 18px;
+                line-height: 1.5;
+                margin-top: 60px;
+                width: 60%;
+            }
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.sc-project {
+    position: relative;
+    z-index: 6;
+
+    .inner {
+        padding: 0;
+        @include tablet {
+            padding: 0 1rem;
+        }
+        @include mobile {
+        }
+    }
+    .project-wrap {
+        overflow: hidden;
+        height: 350vh;
+        position: relative;
+        display: flex;
+        @include desktop {
+            height: 245vh;
+        }
+        @include tablet {
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .left {
+            top: 0;
+            left: 0;
+            height: 100vh;
+            position: sticky;
+            width: 40%;
+            padding: 150px 1rem;
+            @include tablet {
+                padding: 80px 0;
+                position: relative;
+                height: auto;
+                width: 100%;
+            }
+            @include mobile {
+                padding: 50px 0;
+            }
+            .text-box {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                .title {
+                    font-size: 160px;
+                    font-family: "DM Serif Display", serif;
+                    overflow: hidden;
+                    @include desktop {
+                        font-size: 100px;
+                    }
+                    @include tablet {
+                        font-size: 15vw;
+                    }
+                    @include mobile {
+                        font-size: 70px;
+                    }
+                }
+                .bottom {
+                    .desc {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+        .right-list {
+            flex: 1;
+            position: relative;
+
+            .right-item {
+                height: 50vh;
+                @include desktop {
+                    height: 35vh;
+                }
+
+                @include mobile {
+                    height: 100%;
+
+                    & + .right-item {
+                        margin-top: 30px;
+                    }
+                }
+                &:nth-child(2n) a {
+                    flex-direction: row-reverse;
+                    @include mobile {
+                        flex-direction: column-reverse;
+                    }
+                }
+            }
+            a {
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                @include mobile {
+                    flex-direction: column-reverse;
+                }
+
+                &:hover .img-box img {
+                    transition: 0.5s;
+
+                    filter: grayscale(0);
+                }
+                .text-box {
+                    height: 100%;
+                    width: 50%;
+                    padding: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    @include desktop {
+                        padding: 20px;
+                    }
+
+                    @include mobile {
+                        width: 100%;
+                        padding: 15px 0px;
+                    }
+                    .tag-wrap {
+                        .tag {
+                            color: #ababab;
+                            @include desktop {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                    .name {
+                        padding-top: 15px;
+                        font-size: 35px;
+                        display: inline-block;
+                        color: #191717;
+                        position: relative;
+                        @include desktop {
+                            font-size: 30px;
+                        }
+
+                        @include mobile {
+                            padding-top: 0;
+                            font-size: 25px;
+                        }
+                    }
+                    .desc {
+                        color: #6c5f5b;
+                        font-size: 18px;
+                        padding-top: 20px;
+                        @include desktop {
+                            font-size: 15px;
+                        }
+
+                        @include mobile {
+                            padding-top: 10px;
+                        }
+                    }
+                }
+
+                .img-box {
+                    height: 100%;
+                    width: 50%;
+                    @include mobile {
+                        width: 100%;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        filter: grayscale(1);
+                        @include mobile {
+                            filter: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sc-im {
+    z-index: 0;
+    height: 500vh;
+    background-color: transparent;
+    position: relative;
+
+    .text-wrap {
+        z-index: 1;
+        position: absolute;
+        top: 0%;
+        bottom: 0%;
+        left: 0%;
+        right: 0%;
+        .text-box {
+            z-index: 0;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+            .title {
+                font-family: "DM Serif Display", serif;
+                text-align: center;
+                text-transform: uppercase;
+                margin-top: 0.8em;
+                margin-bottom: 0.8em;
+                padding-top: 0;
+                padding-bottom: 0.2em;
+                font-size: clamp(40px, 10.3333vw, 180px);
+                font-weight: 500;
+                line-height: 1em;
+                position: relative;
+                @include mobile {
+                    font-size: 70px;
+                }
+            }
+        }
+    }
+
+    .img-wrap {
+        height: 350vh;
+        position: relative;
+        .img-area {
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+
+            .img-box {
+                width: 95vw;
+                perspective: 200vw;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                grid-auto-columns: 1fr;
+                align-items: center;
+                justify-items: center;
+                display: grid;
+
+                div {
+                    opacity: 1;
+                    width: 100%;
+                    height: 100%;
+                    max-height: 40svh;
+                    max-width: 100%;
+                    object-fit: cover;
+                    transform-style: preserve-3d;
+                    will-change: opacity, transform;
+
+                    transform: translate3d(0px, 0px, -50vw) scale3d(1, 1, 1)
+                        rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+                        skew(0deg, 0deg);
+                    // transition: 1s;
+                }
+                > div:nth-child(1) {
+                    grid-area: 3/4/5/6;
+                    margin-top: 20px;
+                }
+                > div:nth-child(2) {
+                    grid-area: 3/1/5/3;
+                    width: 70%;
+                }
+                > div:nth-child(3) {
+                    grid-area: 1/3/2/5;
+                    width: 55%;
+                }
+                > div:nth-child(4) {
+                    grid-area: 1/5/3/6;
+                }
+                > div:nth-child(5) {
+                    grid-area: 1/3/3/2;
+                    height: 80%;
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+.sc-contact {
+    display: flex;
+    background: #191717;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6.5rem;
+    gap: 2rem;
+
+    // z-index: 6;
+    position: relative;
+    height: 100vh;
+    @include desktop {
+        height: calc(100vh - 100px);
+    }
+    @include tablet {
+    }
+    @include mobile {
+    }
+
+    .text-box {
+        opacity: 0;
+        color: #fff;
+        position: relative;
+        text-align: center;
+        z-index: 9;
+        .title {
+            font-family: "DM Serif Display", serif;
+            font-size: 200px;
+
+            @include desktop {
+                font-size: 130px;
+            }
+            @include tablet {
+                font-size: 130px;
+            }
+            @include mobile {
+                font-size: 80px;
+            }
+        }
+
+        a {
+            display: block;
+            text-align: right;
+            line-height: 1.6;
+            font-family: "DM Serif Display", serif;
+            letter-spacing: 0.2rem;
+            @include tablet {
+                letter-spacing: 0.1rem;
+            }
+            @include mobile {
+                letter-spacing: 0;
+            }
+            span {
+                font-size: 25px;
+                @include tablet {
+                    font-size: 20px;
+                }
+                @include mobile {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        p {
+            position: absolute;
+            top: 0;
+            @include tablet {
+                font-size: 15px;
+            }
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/content/bg.gif);
+    background-position: 0 0;
+    background-size: 250px;
+    opacity: 0.03;
+    z-index: 2;
+}
