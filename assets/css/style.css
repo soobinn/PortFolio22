@@ -1382,16 +1382,12 @@ body.dark svg {
   position: relative;
   z-index: 6;
 }
-.sc-project .inner {
-  padding: 0;
-}
 @media (max-width: 1023px) {
   .sc-project .inner {
     padding: 0 1rem;
   }
 }
 .sc-project .project-wrap {
-  overflow: hidden;
   height: 350vh;
   position: relative;
   display: -webkit-box;
@@ -1418,7 +1414,7 @@ body.dark svg {
   height: 100vh;
   position: sticky;
   width: 40%;
-  padding: 150px 1rem;
+  padding: 150px 0;
 }
 @media (max-width: 1023px) {
   .sc-project .project-wrap .left {
@@ -1462,7 +1458,7 @@ body.dark svg {
 }
 @media (max-width: 767px) {
   .sc-project .project-wrap .left .text-box .title {
-    font-size: 70px;
+    font-size: 90px;
   }
 }
 .sc-project .project-wrap .left .text-box .bottom .desc {

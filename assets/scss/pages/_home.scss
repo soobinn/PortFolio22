@@ -185,7 +185,6 @@ body {
     z-index: 6;
 
     .inner {
-        padding: 0;
         @include tablet {
             padding: 0 1rem;
         }
@@ -193,7 +192,6 @@ body {
         }
     }
     .project-wrap {
-        overflow: hidden;
         height: 350vh;
         position: relative;
         display: flex;
@@ -211,7 +209,7 @@ body {
             height: 100vh;
             position: sticky;
             width: 40%;
-            padding: 150px 1rem;
+            padding: 150px 0;
             @include tablet {
                 padding: 80px 0;
                 position: relative;
@@ -238,7 +236,7 @@ body {
                         font-size: 15vw;
                     }
                     @include mobile {
-                        font-size: 70px;
+                        font-size: 90px;
                     }
                 }
                 .bottom {
