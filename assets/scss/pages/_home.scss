@@ -478,14 +478,7 @@ body {
 
     // z-index: 6;
     position: relative;
-    height: 100vh;
-    @include desktop {
-        height: calc(100vh - 100px);
-    }
-    @include tablet {
-    }
-    @include mobile {
-    }
+    height: calc(100vh - 108px);
 
     .text-box {
         opacity: 0;

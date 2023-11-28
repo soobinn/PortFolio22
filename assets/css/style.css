@@ -1754,12 +1754,7 @@ body.dark svg {
   padding: 6.5rem;
   gap: 2rem;
   position: relative;
-  height: 100vh;
-}
-@media (max-width: 1200px) {
-  .sc-contact {
-    height: calc(100vh - 100px);
-  }
+  height: calc(100vh - 108px);
 }
 .sc-contact .text-box {
   opacity: 0;
