@@ -174,7 +174,6 @@ ScrollTrigger.create({
     trigger: ".bg-switch",
     start: "80% 0%",
     end: "100% 50%",
-    markers: true,
     toggleClass: { targets: "body", className: "dark" },
 });
 
