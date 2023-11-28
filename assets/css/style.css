@@ -1111,6 +1111,7 @@ footer {
   position: relative;
   z-index: 6;
   border-top: 1px solid #fff;
+  background-color: #191717;
   color: #fff;
 }
 footer .inner {
@@ -1153,9 +1154,6 @@ footer .icon-wrap a {
   }
 }
 
-body.dark {
-  background-color: #191717;
-}
 body.dark header {
   -webkit-filter: invert(1);
           filter: invert(1);
@@ -1289,6 +1287,9 @@ body.dark svg {
   width: 100%;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
+}
+.sc-main .main-video video:-webkit-media-controls-play-button {
+  display: none;
 }
 
 .sc-intro {

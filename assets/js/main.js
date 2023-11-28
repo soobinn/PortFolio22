@@ -174,16 +174,17 @@ ScrollTrigger.create({
     trigger: ".bg-switch",
     start: "80% 0%",
     end: "100% 50%",
-    // markers: true,
+    markers: true,
     toggleClass: { targets: "body", className: "dark" },
 });
 
 gsap.to(".sc-contact .text-box", {
     scrollTrigger: {
         trigger: ".sc-contact",
-        start: "0% 10%",
+        start: "0% 50%",
         end: "100% 100%",
         scrub: 1,
+        // markers: true,
     },
     opacity: 1,
 });
